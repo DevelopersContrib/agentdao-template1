@@ -1,0 +1,19 @@
+ .md\:tracking-tight{
+    background: #FC0606;
+    background: linear-gradient(to right, #de0997 20%, #e5d9d5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border:1px #ece5e5;    
+}
+
+.text-bg-customlight {
+    background: #FC0606;
+    background: linear-gradient(to right, #FC0606 20%, #0bba17 30%, #ba0da8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+:is(.dark .dark\:text-white) {
+    background: linear-gradient(to right, #f7f4f4 20%, #807777 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+  }

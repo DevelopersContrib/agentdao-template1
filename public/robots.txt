@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://agentdao.com
+
+# Sitemaps
+Sitemap: https://agentdao.com/sitemap.xml
