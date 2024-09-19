@@ -10,8 +10,7 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 import "../globals.css";
 import ToasterContext from "../context/ToastContext";
-import { Metadata } from 'next';
-import { getDomain, getData } from "@/lib/data";
+
 
 
 

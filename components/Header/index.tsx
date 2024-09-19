@@ -41,15 +41,15 @@ const Header = ({domain, logo}) => {
         <div className="w-full lg:w-1/4 flex items-center justify-between">
           <a href="/">
             <Image
-              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
-              alt="AgentDao"
+              src={logo}
+              alt={domain}
               width={119.03}
               height={30}
               className="w-full hidden dark:block"
             />
             <Image
-              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
-              alt="AgentDao"
+              src={logo}
+              alt={domain}
               width={119.03}
               height={30}
               className="w-full dark:hidden"
