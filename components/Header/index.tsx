@@ -37,7 +37,7 @@ const Header = ({domain, logo}) => {
           : ""
       }`}
     >
-      <div className="bg-neutral1 dark:bg-black p-1 pl-1 pr-1 rounded-full mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
+      <div className="bg-slatebg dark:bg-black p-1 pl-1 pr-1 rounded-full mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
         <div className="w-full lg:w-1/4 flex items-center justify-between">
           <a href="/">
             <Image
@@ -113,7 +113,7 @@ const Header = ({domain, logo}) => {
                     <>
                       <a
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="hover:text-waterloo active:text-accent1 flex items-center justify-between gap-3 cursor-pointer"
+                        className="hover:text-primaryho active:text-accent1 flex items-center justify-between gap-3 cursor-pointer"
                       >
                         {menuItem.title}
                         <span>
@@ -131,7 +131,7 @@ const Header = ({domain, logo}) => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-neutral1 active:text-accent1">
+                          <li key={key} className="hover:text-primaryho active:text-accent1">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -160,7 +160,7 @@ const Header = ({domain, logo}) => {
            
 
             <Link
-              href="/betaapply" target="_blank"
+              href="https://agentdao.com/betaapply" target="_blank"
               className="flex items-center justify-center  hover:text-hintred ease-in-out duration-300 text-bolder py-2.5 px-7.5"
             >
               Apply for Beta Access 🔥

@@ -10,7 +10,8 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 import "../globals.css";
 import ToasterContext from "../context/ToastContext";
-import { Metadata } from 'next'
+import { Metadata } from 'next';
+import { getDomain, getData } from "@/lib/data";
 
 
 
@@ -19,6 +20,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html lang="eng">
       <Script
@@ -37,7 +39,7 @@ export default function RootLayout({
         <ThemeProvider
           enableSystem={false}
           attribute="class"
-          defaultTheme="light:headerbg"
+          defaultTheme="light"
         >
 
             <Lines />
