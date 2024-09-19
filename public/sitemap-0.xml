@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://s/betaapply</loc><lastmod>2024-09-19T16:02:45.965Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/contact</loc><lastmod>2024-09-19T16:02:45.966Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/partner</loc><lastmod>2024-09-19T16:02:45.966Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/terms</loc><lastmod>2024-09-19T16:02:45.966Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/blog</loc><lastmod>2024-09-19T16:02:45.967Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/about</loc><lastmod>2024-09-19T16:02:45.967Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/privacypolicy</loc><lastmod>2024-09-19T16:02:45.967Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/support</loc><lastmod>2024-09-19T16:02:45.967Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://s/jointeam</loc><lastmod>2024-09-19T16:02:45.967Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/about</loc><lastmod>2024-09-19T16:07:49.588Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/betaapply</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/privacypolicy</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/terms</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/partner</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/jointeam</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/contact</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/blog</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>schoolbot.com/support</loc><lastmod>2024-09-19T16:07:49.590Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
