@@ -6,16 +6,23 @@ import Feature from "@/components/Features";
 import About from "@/components/About";
 import Integration from "@/components/Integration";
 import Hero2 from "@/components/Hero/hero2";
-import { getData, getDomain, getScript } from 'lib/data';
-import Agentfeatures from "@/components/Agentfeatures";
+import { getData, getDomain} from 'lib/data';
+import Agentfeatures from "@/components/Mission copy";
 
-export const metadata: Metadata = {
-  title:
-    "AgentDAO - The Autonomous Smart Entity Service Platform for Digital Assets Using AI and blockchain concepts",
-  description:
-    "AgentDAO is a network of AI autonomous smart agents that provide digital services. Our ai agents are not just static applications, but continuously learn, enhance themselves, and adapt to changing circumstances.",
-  // other metadata
-};
+
+
+export async function generateMetadata(): Promise<Metadata> {
+  const c = await getData()
+  return {
+    // This will override or extend the layout metadata
+    title: `Home - ${c.data.title || c.data.domainName}`,
+    description: `${c.data.description}`,
+  
+    }
+}
+
+
+
 
 export default async function Home() {
   const c = await getData();

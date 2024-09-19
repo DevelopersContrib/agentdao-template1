@@ -259,7 +259,10 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
-              <p>&copy; 2024 Vnoc.com. All rights reserved. </p>
+              <p className="capitalize">
+  &copy; 2024 Made with ❤️ Love by {domain}. Distributed by{" "}
+  <a href="https://vnoc.com">VNOC.COM</a> 🌐. All rights reserved. 🔒
+</p>
             </motion.div>
 
             <motion.div
