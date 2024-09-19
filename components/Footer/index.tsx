@@ -132,7 +132,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="https://domaindirectory.com/servicepage/?domain=agentdao.com"
+                        href={`https://domaindirectory.com/servicepage/?domain=${domain}`}
                         className="inline-block hover:text-primary mb-3"
                       >
                         Contact Us
@@ -141,7 +141,7 @@ const Footer = () => {
                     
                     <li>
                       <a
-                        href="https://contrib.com/to/agentdao.com"
+                        href={`https://contrib.com/to/${domain}`}
                         className="inline-block hover:text-primary mb-3"
                       >
                         Contribute to AgentDao
@@ -149,7 +149,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="https://domaindirectory.com/servicepage/?domain=agentdao.com"
+                        href={`https://domaindirectory.com/servicepage/?domain=${domain}`}
                         className="inline-block hover:text-primary mb-3"
                       >
                         Partner with AgentDao
@@ -234,7 +234,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://domaindirectory.com/servicepage/?domain=agentdao.com" className="hover:text-primary">
+                <a href={`https://domaindirectory.com/servicepage/?domain=${domain}`}>
                     Support
                   </a>
                 </li>
