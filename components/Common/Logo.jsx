@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import {getdata} from "@/lib/data"
 
 export default function Logo({domain,logo}) {
   return(
@@ -12,15 +13,7 @@ export default function Logo({domain,logo}) {
               className='d-inline-flex img-fluid mb-3'
             /> : <h1 className="tw-text-xxxl font-800 text-capitalize">{domain}</h1>
       }
-      <p className="tw-text-2xl">
-        <a href="https://contrib.com/" className="tw-no-underline text-primary">
-        Proud Member of CONTRIB
-        </a>
-        {" "}|{" "}
-        <a href="https://vnoc.com/" className="tw-no-underline text-primary">
-        Powered by VNOC
-        </a>
-      </p>
+      
     </>
   )
 }

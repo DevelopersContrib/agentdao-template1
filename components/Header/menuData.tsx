@@ -31,7 +31,7 @@ const menuData: Menu[] = [
         id: 51,
         title: "Our Story",
         newTab: false,
-        path: "/about",
+        path: "https://agentdao.com/about",
       },
      
       {

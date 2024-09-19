@@ -6,10 +6,12 @@ import { usePathname } from "next/navigation";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import Logo from "../Common/Logo";
+import { getData } from "@/lib/data";
 
 
-const Header = ({domain, logo}) => {
+const Header = () => {
+  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -41,14 +43,14 @@ const Header = ({domain, logo}) => {
         <div className="w-full lg:w-1/4 flex items-center justify-between">
           <a href="/">
             <Image
-              src={logo}
+              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
               alt={domain}
               width={119.03}
               height={30}
               className="w-full hidden dark:block"
             />
             <Image
-              src={logo}
+              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
               alt={domain}
               width={119.03}
               height={30}
