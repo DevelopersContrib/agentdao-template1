@@ -7,7 +7,7 @@ import {
   postQueryByCategory,
   postQueryByTag,
   postQueryBySlug,
-} from "./sanity-query";
+} from "@/sanity/sanity-query";
 import { Blog } from "@/types/blog";
 import { integrations } from "@/integration.config";
 

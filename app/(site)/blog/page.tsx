@@ -3,12 +3,13 @@ import { Metadata } from "next";
 
 import { getPosts } from "@/sanity/sanity-utils";
 import { Blog } from "@/types/blog";
-
 import { integrations, messages } from "@/integration.config";
 
+//import { integrations, messages } from "@/integration.config";
+
 export const metadata: Metadata = {
-  title: "Blog Page - Solid SaaS Boilerplate",
-  description: "This is Blog page for Solid Pro",
+  title: "Blog ",
+  
   // other metadata
 };
 

@@ -7,7 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["localhost","vnoclogos.s3-us-west-1.amazonaws.com"],
+    domains: ["localhost","vnoclogos.s3-us-west-1.amazonaws.com","cdn.sanity.io"],
     remotePatterns: [
       {
         protocol: "https",
