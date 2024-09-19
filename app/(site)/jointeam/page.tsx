@@ -5,13 +5,16 @@ import VNOC_newsletter from "@/components/Forms/newsletter";
 
 
 export const metadata: Metadata = {
-  title: "Join the Team | AgentDao",
-  description: "Join the AgentDAO Team: Embrace the Power of Collaboration-Be Part of the Colony - Where Every Member Matters",
-
+  title: "Join the Team | {domain}",
+  description: "Join the {domain} Team: Embrace the Power of Collaboration-Be Part of the Colony - Where Every Member Matters",
+  
   // other metadata
 };
 
+
+
 const Jointeampage = () => {
+ const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
   return (
     <>
 <section
@@ -26,8 +29,8 @@ const Jointeampage = () => {
                            >
                            <div className="flex flex-wrap items-center -mx-4">
                               <div className="w-full px-4 lg:w-1/2">
-                                 <span className="block mb-4 text-base font-medium text-white">
-                                 Apply Today and Start Your Journey with AgentDAO
+                                 <span className="block mb-4 text-base font-medium text-white capitalize">
+                                 Apply Today and Start Your Journey with {domain}
                                  </span>
                                  <h2
                                     className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0"
@@ -48,6 +51,7 @@ const Jointeampage = () => {
                                  </div>
                               </div>
                            </div>
+                           <VNOC_newsletter />
                            <div>
                               <span className="absolute top-0 left-0 z-[-1]">
                                  <svg
@@ -118,7 +122,7 @@ const Jointeampage = () => {
 
                
             </div>
-            <VNOC_newsletter />
+            
          </div>
          <div  className="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div  className="mt-10 lg:mt-0">
@@ -126,11 +130,11 @@ const Jointeampage = () => {
                Be Part of the Colony - Where Every Member Matters
                </span>
                <h2
-                   className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]"
+                   className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px] capitalize"
                   >
                   <a
                                        href="https://www.contrib.com/signup/firststep?domain=agentdao.com">
-                                          Join the AgentDAO Team: Embrace the Power of Collaboration
+                                          Join the {domain} Team: Embrace the Power of Collaboration
                   </a>                        
                </h2>
                <p  className="mb-5 text-base text-body-color dark:text-dark-6">
@@ -138,21 +142,7 @@ const Jointeampage = () => {
 
                </p>
               
-               <h2
-                   className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]"
-                  >
-                  We Offer
-               </h2>
-               <p  className="mb-8 text-base text-body-color dark:text-dark-6">
-               <b>A Supportive Environment:</b> Where your contributions are valued and your growth is encouraged.
-               </p>
-
-               <p  className="mb-8 text-base text-body-color dark:text-dark-6">
-               <b>Cutting-Edge Projects: </b> Engage with technologies that are shaping the future.
-               </p>   
-               <p  className="mb-8 text-base text-body-color dark:text-dark-6">
-               <b>A Global Team:</b> Connect with brilliant minds from around the world.
-               </p>
+              
 
                <h2
                    className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]"

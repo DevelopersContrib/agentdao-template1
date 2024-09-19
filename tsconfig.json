@@ -36,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "components/Common/Logo.jsx"  ],
   "exclude": [
     "node_modules"
   ]

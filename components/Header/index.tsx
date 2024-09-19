@@ -6,8 +6,10 @@ import { usePathname } from "next/navigation";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import Logo from "../Common/Logo";
 
-const Header = () => {
+
+const Header = ({domain, logo}) => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -29,31 +31,32 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 w-full z-99999 py-7 ${
+      className={`border-r-alabaster fixed px-2 w-full z-99999 py-7 ${
         stickyMenu
-          ? "bg-white dark:bg-black shadow !py-4 transition duration-100"
+          ? "dark:bg-black shadow !py-4 transition duration-100"
           : ""
       }`}
     >
-      <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
+      <div className="bg-neutral1 dark:bg-black p-1 pl-1 pr-1 rounded-full mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
         <div className="w-full lg:w-1/4 flex items-center justify-between">
           <a href="/">
             <Image
-              src="/images/logo/logo-AgentDao-onblack.svg"
+              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
               alt="AgentDao"
               width={119.03}
               height={30}
               className="w-full hidden dark:block"
             />
             <Image
-              src="/images/logo/logo-AgentDao-onwhite.svg"
+              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
               alt="AgentDao"
               width={119.03}
               height={30}
               className="w-full dark:hidden"
             />
+            
           </a>
-
+          
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
             aria-label="hamburger Toggler"
@@ -139,8 +142,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "hover:text-neutral1 text-primary active:text-accent1"
-                          : "hover:text-neutral1 active:text-accent1"
+                          ? "hover:text-dark text-primary active:text-accent1"
+                          : "hover:text-dark active:text-accent1"
                       }
                     >
                       {menuItem.title}
@@ -158,7 +161,7 @@ const Header = () => {
 
             <Link
               href="/betaapply" target="_blank"
-              className="flex items-center justify-center bg-primary hover:bg-primaryho ease-in-out duration-300 text-white text-regular rounded-full py-2.5 px-7.5"
+              className="flex items-center justify-center  hover:text-hintred ease-in-out duration-300 text-bolder py-2.5 px-7.5"
             >
               Apply for Beta Access 🔥
             </Link>

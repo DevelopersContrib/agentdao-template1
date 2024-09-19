@@ -35,11 +35,11 @@ export default function RootLayout({
         <ThemeProvider
           enableSystem={false}
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light:headerbg"
         >
 
             <Lines />
-            <Header />
+            <Header/>
             <ToasterContext />
             {children}
             <Footer />
@@ -47,7 +47,7 @@ export default function RootLayout({
         </ThemeProvider>
 
           <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/42816889.js"></script>
-       
+          <script type="text/javascript" async defer src="./node_modules/preline/dist/preline.js"></script>
       </body>
     </html>
   );

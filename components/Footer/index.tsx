@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import VNOC_newsletter from "../Forms/newsletter";
 
 const Footer = () => {
+  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
   return (
     <>
       <footer className="bg-white dark:bg-blacksection border-t border-stroke dark:border-strokedark">
@@ -30,7 +31,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="index.html" className="relative">
+                <a href="https://agentdao.com" className="relative">
                   <Image
                     width={110}
                     height={80}
@@ -50,7 +51,7 @@ const Footer = () => {
                 <p className="mt-5 mb-10">
                 The Autonomous Smart Entity Service Platform. Redefining the Future of Digital Services. Powered by eCorp
                 </p>         
-                <VNOC_newsletter />
+                
               </motion.div>
 
               <div className="w-full lg:w-2/3 xl:w-7/12 flex flex-col md:flex-row md:justify-between gap-8 md:gap-0">
@@ -88,7 +89,7 @@ const Footer = () => {
                     
                     <li>
                       <a
-                        href="https://blog.dntrademark.com"
+                        href="https://blog.agentdao.com"
                         className="inline-block hover:text-primary mb-3"
                       >
                         Blog

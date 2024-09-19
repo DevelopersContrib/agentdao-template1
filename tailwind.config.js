@@ -5,7 +5,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
+    "node_modules/preline/dist/*.js",
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -27,7 +27,7 @@ module.exports = {
       titlebgdark: "#46495A",
       gray:"#333333",
       btndark: "#292E45",
-      white: "#FFFFFF",
+      white: "#ffffff",
       black: "#181C31",
       blackho: "#2C3149",
       blacksection: "#1C2136",
@@ -49,7 +49,8 @@ module.exports = {
       hintred:"#ef476f",
       accent1:"#008080",
       accent2:"#FFCC00",
-      neutral1:"#f0f0f0",      
+      neutral1:"#f0f0f0",
+      headerbg:"#EAE4DD",      
   },
     extend: {
       fontSize: {
@@ -166,5 +167,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('preline/plugin'),
+  ],
 };

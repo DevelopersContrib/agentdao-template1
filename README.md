@@ -9,6 +9,7 @@ Here are the steps you need to follow to install the dependencies.
     
 ```bash
     npm install
+    npm install framer-motion
 ```
     
 or

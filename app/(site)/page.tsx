@@ -6,6 +6,8 @@ import Feature from "@/components/Features";
 import About from "@/components/About";
 import Integration from "@/components/Integration";
 import Hero2 from "@/components/Hero/hero2";
+import { getData, getDomain, getScript } from 'lib/data';
+import Agentfeatures from "@/components/Agentfeatures";
 
 export const metadata: Metadata = {
   title:
@@ -15,16 +17,16 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-export default function Home() {
+export default async function Home() {
+  const c = await getData();
+  const domain = getDomain();
   return (
     <main>
-      <Hero2 />
-
-      <CTA />
-
+      <Hero2 domain={domain} />
+      <Agentfeatures domain={domain}/>
       <Feature />
       <About />
-      <Mission />
+      
       <Integration />
     </main>
   );
