@@ -16,6 +16,8 @@ Here are the steps you need to follow to install the dependencies.
     npm install @next-auth/prisma-adapter
     npm install algoliasearch
     npm install nodemailer
+    npm install react@18.3.1 react-dom@18.3.1
+
 
 
 
