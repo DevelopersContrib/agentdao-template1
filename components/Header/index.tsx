@@ -157,7 +157,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-6 mt-7 lg:mt-0">
-            <ThemeToggler />
+            
 
            
 
