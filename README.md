@@ -11,6 +11,14 @@ Here are the steps you need to follow to install the dependencies.
 ```bash
     npm install
     npm install framer-motion
+    npm install next-auth
+    npm install bcrypt
+    npm install @next-auth/prisma-adapter
+    npm install algoliasearch
+    npm install nodemailer
+
+
+
 ```
 
 or

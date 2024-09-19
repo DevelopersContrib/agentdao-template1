@@ -1,4 +1,4 @@
-import algoliasearch from "algoliasearch";
+import { Algoliasearch } from "algoliasearch";
 import { load } from "cheerio";
 
 const APP_ID = process.env.NEXT_PUBLIC_ALGOLIA_PROJECT_ID ?? "";
