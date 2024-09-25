@@ -10,6 +10,7 @@ import {
 } from "@/sanity/sanity-query";
 import { Blog } from "@/types/blog";
 import { integrations } from "@/integration.config";
+import {  getBlogs, getBlogsById } from '@/lib/data';
 
 export async function sanityFetch<QueryResponse>({
   query,
@@ -84,4 +85,25 @@ export async function getPostBySlug(slug: string, fields: string[] = []) {
     tags: ["post", "category"],
   });
   return post;
+}
+
+export async function getBlogPostById(id: number) {
+    
+  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  const url = process.env.GET_BLOGS+`&domain=${domain}&id=${id}`;
+  console.log('url',url)
+  const res = await fetch(url, { next: { revalidate: 3600 } });
+ 
+  
+  if (!res.ok){
+      // This will activate the closest `error.js` Error Boundary
+      throw new Error("Failed to fetch data");
+  }
+
+  
+  const blogs = await res.json();
+  return blogs.data[0];
+  
+  
+  
 }

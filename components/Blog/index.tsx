@@ -1,10 +1,36 @@
+"use client"
+
+import { useEffect, useState } from 'react';
 import React from "react";
 import SectionHeader from "../Common/SectionHeader";
-import BlogItem from "./BlogItem";
-import { getPosts } from "@/sanity/sanity-utils";
+import BlogPost from "./BlogPost";
+import LoadingState from '@/components/includes/LoadingState';
 
-const Blog = async () => {
-  const posts = await getPosts();
+const Blog  = () => {
+  const [blogPosts,   setBlogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const src = "data:image/jpeg;base64,";
+
+  useEffect(() => {
+    const fetchData = async () => {
+        const response = await fetch("/api/blogs",{ next: { revalidate: 3600 } });
+          console.log(response);
+          if (response.ok) {
+            const res = await response.json()
+           setBlogs(res.blogs)
+           setIsLoading(false)
+            
+        if(res.status){
+          
+          console.log('done....')
+        }
+        
+      }else{
+        alert('An error occurred')
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <section className="py-20 lg:py-25 xl:py-30">
@@ -24,9 +50,16 @@ const Blog = async () => {
 
       <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
         <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-          {posts.slice(0, 3).map((blog, key) => (
-            <BlogItem blog={blog} key={key} />
+        { isLoading ? <LoadingState />  : 
+        <div className="row">
+          {blogPosts.map((blog, index) => (
+            <BlogPost blog={blog} key={index} />
           ))}
+        </div>    
+}
+
+          
+          
         </div>
       </div>
     </section>
