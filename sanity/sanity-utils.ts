@@ -88,22 +88,15 @@ export async function getPostBySlug(slug: string, fields: string[] = []) {
 }
 
 export async function getBlogPostById(id: number) {
-    
   const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
   const url = process.env.GET_BLOGS+`&domain=${domain}&id=${id}`;
   console.log('url',url)
   const res = await fetch(url, { next: { revalidate: 3600 } });
- 
-  
-  if (!res.ok){
+ if (!res.ok){
       // This will activate the closest `error.js` Error Boundary
       throw new Error("Failed to fetch data");
   }
-
-  
+ 
   const blogs = await res.json();
   return blogs.data[0];
-  
-  
-  
 }
