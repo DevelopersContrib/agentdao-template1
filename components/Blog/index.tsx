@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import SectionHeader from "../Common/SectionHeader";
 import BlogPost from "./BlogPost";
-import LoadingState from "@/components/includes/LoadingState";
+import LoadingState from "@/components/Includes/LoadingState";
 
 const Blog = () => {
   const [blogPosts, setBlogs] = useState([]);

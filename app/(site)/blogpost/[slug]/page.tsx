@@ -9,7 +9,7 @@ import Categories from "@/components/Blog/Categories";
 import Link from "next/link";
 
 import { integrations } from "@/integration.config";
-import LoadingState from '@/components/includes/LoadingState';
+import LoadingState from '@/components/Includes/LoadingState';
 
 type Props = {
   params: { slug: string };
