@@ -9,12 +9,12 @@ type BlogPost = {
     title: string;
     slug?: any;
     image_base64: string;
+    image_url: string;
     image_caption: string;
     tags?: string;
   };
 
 const BlogPost = ({ blog }: { blog: BlogPost}) => {
-  const src = "data:image/jpeg;base64,";
   return (
     <>
       <motion.div
@@ -39,9 +39,9 @@ const BlogPost = ({ blog }: { blog: BlogPost}) => {
           href={`/blogpost/${blog.slug+'---'+blog.id}`}
           className="relative block aspect-[368/239] overflow-hidden rounded-lg"
         >
-          {blog.image_base64 ? (
+          {blog.image_url ? (
             <Image
-              src={src+blog.image_base64}
+              src={blog.image_url}
               alt={blog.image_caption}
               fill
               className="duration-300 group-hover:scale-110"
