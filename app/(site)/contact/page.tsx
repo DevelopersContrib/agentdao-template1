@@ -4,15 +4,16 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Support Page - Solid SaaS Boilerplate",
-  description: "This is Support page for Solid Pro",
+  title: "Support Page ${domain}",
+  description: "Send a Support Ticket for ${domain}",
   // other metadata
 };
 
 const ContactPage = () => {
+  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
   return (
     <div className="widget2">
-    <Script src="https://tools.contrib.com/pages/contact?d=agentdao.com&class=widget2&header=0&footer=0" />
+    <Script src="https://tools.contrib.com/pages/contact?d=${domain}&class=widget2&header=0&footer=0" />
     </div>
    
   );

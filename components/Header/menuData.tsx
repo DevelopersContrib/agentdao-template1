@@ -31,14 +31,14 @@ const menuData: Menu[] = [
         id: 51,
         title: "Our Story",
         newTab: false,
-        path: "https://agentdao.com/about",
+        path: "/about",
       },
      
       {
         id: 52,
         title: "Blog",
         newTab: false,
-        path: "https://blog.agentdao.com",
+        path: "/blog",
       },
    
       {

@@ -5,6 +5,7 @@ import VNOC_newsletter from "@/components/Forms/newsletter";
 
 
 export const metadata: Metadata = {
+   
   title: "Join the Team | {domain}",
   description: "Join the {domain} Team: Embrace the Power of Collaboration-Be Part of the Colony - Where Every Member Matters",
   

@@ -3,8 +3,8 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support Page - Agent Dao",
-  description: "This is Support page for AgentDao",
+  title: "Support Page ${domain}",
+  description: "This is the Support page for ${domain}",
   // other metadata
 };
 
