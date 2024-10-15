@@ -44,14 +44,14 @@ const Header = () => {
           <a href="/">
             <Image
               src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
-              alt={domain}
+              alt="{domain}"
               width={119.03}
               height={30}
               className="w-full hidden dark:block"
             />
             <Image
               src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
-              alt={domain}
+              alt="{domain}"
               width={119.03}
               height={30}
               className="w-full dark:hidden"
@@ -162,10 +162,10 @@ const Header = () => {
            
 
             <Link
-              href="https://agentdao.com/betaapply" target="_blank"
+              href="/betaapply" target="_blank"
               className="flex items-center justify-center  hover:text-hintred ease-in-out duration-300 text-bolder py-2.5 px-7.5"
             >
-              Apply for Beta Access 🔥
+              Apply for AgentDao Beta Access 🔥
             </Link>
           </div>
         </div>
