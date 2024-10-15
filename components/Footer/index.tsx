@@ -1,15 +1,18 @@
 "use client";
-import React from "react";
+import { useEffect, useState } from 'react';
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
+//import { showDomain } from '@/app/(site)/showDomain';
 import VNOC_newsletter from "../Forms/newsletter";
 
 
-
-
-const Footer = () => {
-  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
   
+
+const Footer = async () => {
+  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+
+
   return (
     <>
       <footer className="bg-white dark:bg-blacksection border-t border-stroke dark:border-strokedark">
@@ -40,14 +43,14 @@ const Footer = () => {
                     width={110}
                     height={80}
                     src="/images/logo/logo-AgentDao-onwhite.svg"
-                    alt="Logo"
+                    alt="{domain}"
                     className="dark:hidden"
                   />
                   <Image
                     width={110}
                     height={80}
                     src="/images/logo/logo-AgentDao-onblack.svg"
-                    alt="Logo"
+                    alt="{domain}"
                     className="hidden dark:block"
                   />
                 </a>

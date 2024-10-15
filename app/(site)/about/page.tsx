@@ -1,17 +1,20 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-import { getDomain } from '@/lib/data';
+import { getData, getDomain } from '@/lib/data';
 
 
-export const metadata: Metadata = {
- 
-  title: "About ${domain}",
-  description: "About ${domain}",
-  // other metadata
-};
+export async function generateMetadata(): Promise<Metadata> {
+   const c = await getData();
+   return {
+     // This will override or extend the layout metadata
+     title: `About - ${c.data.title || c.data.domainName}`,
+     description: `${c.data.description}`,
+   };
+ }
 
 const AboutPage = () => {
+  const domain = getDomain();
   return (
     <>
 <section
@@ -26,14 +29,14 @@ const AboutPage = () => {
                   <div  className="py-3 sm:py-4">
                      <img
                         src="/images/about/3.svg"
-                        alt="About AgentDao"
+                        alt="About {domain}"
                          className="w-full rounded-2xl"
                         />
                   </div>
                   <div  className="py-3 sm:py-4">
                      <img
                         src="/images/about/4.svg"
-                        alt="Welcome to AgentDao"
+                        alt="Welcome to {domain}"
                          className="w-full rounded-2xl"
                         />
                   </div>
@@ -621,8 +624,8 @@ const AboutPage = () => {
          </div>
          <div  className="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div  className="mt-10 lg:mt-0">
-               <span  className="block mb-4 text-lg font-semibold text-gray-400">
-               Welcome to AgentDAO
+               <span  className="capitalize block mb-4 text-lg font-semibold text-gray-400">
+               Welcome to {domain}
                </span>
                <h2
                    className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]"
@@ -630,6 +633,7 @@ const AboutPage = () => {
                   Who we are
                </h2>
                <p  className="mb-5 text-base text-body-color dark:text-dark-6">
+              <span className="capitalize">{domain}</span> is a member of <a href="https://agentdao.com">AgentDao</a>. 
                At AgentDAO, we're not just a team; we're a community of forward-thinkers, creators, and dreamers who are united by our profound belief in the transformative potential of autonomous agents. Our foundation rests on the bedrock of decentralization, transparency, and the boundless promise of blockchain technology.
 
                </p>

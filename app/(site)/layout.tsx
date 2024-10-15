@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Script from "next/script";
 import Footer from "@/components/Footer";
@@ -10,7 +10,6 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 import "../globals.css";
 import ToasterContext from "../context/ToastContext";
-
 
 
 
@@ -42,10 +41,10 @@ export default function RootLayout({
         >
 
             <Lines />
-            <Header/>
+            <Header />
             <ToasterContext />
             {children}
-            <Footer />
+            <Footer/>
             <ScrollToTop />
         </ThemeProvider>
 

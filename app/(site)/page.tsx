@@ -27,7 +27,7 @@ export default async function Home() {
       <Hero2 domain={domain} />
       <Agentfeatures domain={domain} />
       <Feature />
-      <About />
+      <About/>
 
       <Integration />
       <Blog />

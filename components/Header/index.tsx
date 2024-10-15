@@ -1,15 +1,18 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import { getData } from "@/lib/data";
+//import { showDomain } from '@/app/(site)/showDomain';
+
 
 
 const Header = () => {
+  //const domain = showDomain();
+  
   const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
   
   const [navigationOpen, setNavigationOpen] = useState(false);

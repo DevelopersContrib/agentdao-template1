@@ -10,7 +10,7 @@ import "./HeroStyle.css";
 
 const Hero2 = ({domain}) => {
   const [email, setEmail] = useState("");
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
   };
