@@ -4,8 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import VNOC_newsletter from "../Forms/newsletter";
 
+
+
+
 const Footer = () => {
   const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  
   return (
     <>
       <footer className="bg-white dark:bg-blacksection border-t border-stroke dark:border-strokedark">

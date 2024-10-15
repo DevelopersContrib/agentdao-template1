@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
+import { getDomain } from '@/lib/data';
 
 
 export const metadata: Metadata = {
-  title: "About Agentdao",
-  description: "About Agentdao",
+ 
+  title: "About ${domain}",
+  description: "About ${domain}",
   // other metadata
 };
 
