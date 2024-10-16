@@ -269,7 +269,7 @@ const Footer = async () => {
               className="animate_top"
             >
               <p className="capitalize">
-  &copy; 2024 Made with ❤️ Love by {domain}. Distributed by{" "}
+  &copy; 2024 Made with ❤️ Love by{" "}
   <a href="https://vnoc.com">VNOC.COM</a> 🌐. All rights reserved. 🔒
 </p>
             </motion.div>
