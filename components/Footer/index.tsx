@@ -151,8 +151,10 @@ const Footer = async () => {
                         href={`https://contrib.com/to/${domain}`}
                         className="inline-block hover:text-primary mb-3"
                       >
-                        Contribute to AgentDao
-                      </a>
+                        
+                        Contribute to {domain}
+                    </a>
+                    
                     </li>
                     <li>
                       <a
