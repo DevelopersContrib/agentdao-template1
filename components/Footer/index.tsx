@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react';
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
-//import { showDomain } from '@/app/(site)/showDomain';
+import { getDomain } from '@/lib/datadomain'
 import VNOC_newsletter from "../Forms/newsletter";
 
 
   
 
 const Footer = async () => {
-  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  const domain = getDomain();
 
 
   return (

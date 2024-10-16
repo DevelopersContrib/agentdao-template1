@@ -1,8 +1,9 @@
 import React from 'react';
 import Script from 'next/script';
+import { getDomain } from '@/lib/datadomain'
 
 const VNOC_contact: React.FC = () => {
-  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  const domain = getDomain();
   return (
     <div>
        

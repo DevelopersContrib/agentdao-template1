@@ -3,17 +3,17 @@ import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import { getDomain } from '@/lib/datadomain'
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-//import { showDomain } from '@/app/(site)/showDomain';
+
 
 
 
 const Header = () => {
-  //const domain = showDomain();
+  const domain = getDomain();
   
-  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  
   
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
@@ -168,7 +168,7 @@ const Header = () => {
               href="/betaapply" target="_blank"
               className="flex items-center justify-center  hover:text-hintred ease-in-out duration-300 text-bolder py-2.5 px-7.5"
             >
-              Apply for AgentDao Beta Access 🔥
+              Apply for AgentDao Beta Access 🔥 
             </Link>
           </div>
         </div>
