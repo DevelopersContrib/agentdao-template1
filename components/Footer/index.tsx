@@ -268,9 +268,8 @@ const Footer = ({domain}) => {
               className="animate_top"
             >
               <p className="capitalize">
-  &copy; 2024 Made with ❤️ Love by{" "}
-  <a href="https://vnoc.com">VNOC.COM</a> 🌐. All rights reserved. 🔒
-</p>
+              &copy; {new Date().getFullYear()} - {domain}
+              </p>
             </motion.div>
 
             <motion.div

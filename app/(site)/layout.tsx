@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 
 import Script from "next/script";
-import Footer from "@/components/Footer";
 import Lines from "@/components/Lines";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
@@ -39,11 +38,9 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="light"
         >
-
             <Lines />
             <ToasterContext />
             {children}
-            <Footer/>
             <ScrollToTop />
         </ThemeProvider>
 
