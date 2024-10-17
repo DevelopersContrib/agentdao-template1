@@ -9,6 +9,7 @@ import Hero2 from "@/components/Hero/hero2";
 import { getData, getDomain } from "lib/data";
 import Agentfeatures from "@/components/Mission copy";
 import Blog from "@/components/Blog";
+import Header from "@/components/Header";
 
 export async function generateMetadata(): Promise<Metadata> {
   const c = await getData();
@@ -24,6 +25,7 @@ export default async function Home() {
   const domain = getDomain();
   return (
     <main>
+      <Header c={c}/>
       <Hero2 domain={domain} />
       <Agentfeatures domain={domain} />
       <Feature />

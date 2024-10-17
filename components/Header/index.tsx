@@ -10,7 +10,7 @@ import menuData from "./menuData";
 
 
 
-const Header = () => {
+const Header = ({c}) => {
   const domain = getDomain();
   
   
@@ -45,20 +45,18 @@ const Header = () => {
       <div className="bg-slatebg dark:bg-black p-1 pl-1 pr-1 rounded-full mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
         <div className="w-full lg:w-1/4 flex items-center justify-between">
           <a href="/">
+         
+           {c.data.logo ?
             <Image
-              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
-              alt="{domain}"
-              width={119.03}
-              height={30}
-              className="w-full hidden dark:block"
-            />
-            <Image
-              src="https://vnoclogos.s3-us-west-1.amazonaws.com/logo-schoolbot.png"
+              src={c.data.logo}
               alt="{domain}"
               width={119.03}
               height={30}
               className="w-full dark:hidden"
             />
+            :
+            <h2 className='text-2xl font-bold text-slate-900 dark:text-white'>{c.data.title}</h2>
+           }
             
           </a>
           

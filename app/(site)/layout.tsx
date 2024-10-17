@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Header from "@/components/Header";
+
 import Script from "next/script";
 import Footer from "@/components/Footer";
 import Lines from "@/components/Lines";
@@ -41,7 +41,6 @@ export default function RootLayout({
         >
 
             <Lines />
-            <Header />
             <ToasterContext />
             {children}
             <Footer/>
