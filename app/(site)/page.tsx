@@ -10,6 +10,7 @@ import { getData, getDomain } from "lib/data";
 import Agentfeatures from "@/components/Mission copy";
 import Blog from "@/components/Blog";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const c = await getData();
@@ -33,6 +34,7 @@ export default async function Home() {
 
       <Integration />
       <Blog />
+      <Footer domain={domain} />
     </main>
   );
 }

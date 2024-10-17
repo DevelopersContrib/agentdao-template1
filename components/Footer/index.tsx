@@ -3,14 +3,13 @@ import { useEffect, useState } from 'react';
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { getDomain } from '@/lib/datadomain'
 import VNOC_newsletter from "../Forms/newsletter";
 
 
   
 
-const Footer = async () => {
-  const domain = getDomain();
+const Footer = ({domain}) => {
+  
 
 
   return (

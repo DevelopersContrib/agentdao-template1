@@ -33,7 +33,7 @@ const Hero2 = ({domain}) => {
             </p>
            
             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
-            <VNOC_newsletter />
+            <VNOC_newsletter domain={domain}/>
             </div>
           </div>
           <div className="w-full mx-auto mt-20 text-center md:w-10/12">
