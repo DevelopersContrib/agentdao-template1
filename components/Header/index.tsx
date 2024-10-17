@@ -1,20 +1,15 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { getDomain } from '@/lib/datadomain'
+import { getDomain } from "@/lib/datadomain";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
-
-
-
-const Header = ({c}) => {
+const Header = ({ c }) => {
   const domain = getDomain();
-  
-  
-  
+
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -37,29 +32,27 @@ const Header = ({c}) => {
   return (
     <header
       className={`border-r-alabaster fixed px-2 w-full z-99999 py-7 ${
-        stickyMenu
-          ? "dark:bg-black shadow !py-4 transition duration-100"
-          : ""
+        stickyMenu ? "dark:bg-black shadow !py-4 transition duration-100" : ""
       }`}
     >
       <div className="bg-slatebg dark:bg-black p-1 pl-1 pr-1 rounded-full mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 lg:flex items-center justify-between relative">
         <div className="w-full lg:w-1/4 flex items-center justify-between">
           <a href="/">
-         
-           {c.data.logo ?
-            <Image
-              src={c.data.logo}
-              alt="{domain}"
-              width={119.03}
-              height={30}
-              className="w-full dark:hidden"
-            />
-            :
-            <h2 className='text-2xl font-bold text-slate-900 dark:text-white'>{c.data.title}</h2>
-           }
-            
+            {c.data.logo ? (
+              <Image
+                src={c.data.logo}
+                alt="{domain}"
+                width={119.03}
+                height={30}
+                className="w-full dark:hidden plc-5"
+              />
+            ) : (
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white plc-5">
+                {c.data.title}
+              </h2>
+            )}
           </a>
-          
+
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
             aria-label="hamburger Toggler"
@@ -134,7 +127,10 @@ const Header = ({c}) => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primaryho active:text-accent1">
+                          <li
+                            key={key}
+                            className="hover:text-primaryho active:text-accent1"
+                          >
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -158,15 +154,12 @@ const Header = ({c}) => {
           </nav>
 
           <div className="flex items-center gap-6 mt-7 lg:mt-0">
-            
-
-           
-
             <Link
-              href="/betaapply" target="_blank"
+              href="/betaapply"
+              target="_blank"
               className="flex items-center justify-center  hover:text-hintred ease-in-out duration-300 text-bolder py-2.5 px-7.5"
             >
-              Apply for AgentDao Beta Access 🔥 
+              Apply for AgentDao Beta Access 🔥
             </Link>
           </div>
         </div>

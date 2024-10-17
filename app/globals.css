@@ -121,3 +121,7 @@ pre {
 .active-tab {
   @apply text-black dark:text-white dark:bg-blackho bg-stroke
 }
+
+.plc-5 {
+  padding-left: 1.5rem;
+}
