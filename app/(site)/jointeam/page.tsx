@@ -49,7 +49,7 @@ export default async function Jointeampag() {
                               <div className="w-full px-4 lg:w-1/2">
                                  <div className="flex flex-wrap lg:justify-end">
                                     <a
-                                       href="https://www.contrib.com/signup/firststep?domain=agentdao.com"
+                                       href={`https://www.contrib.com/signup/firststep?domain=${domain}`}
                                        className="inline-block py-3 my-1 mr-4 text-base font-medium transition bg-white border border-transparent rounded-md hover:shadow-1 px-7 text-primary hover:text-primary"
                                        >
                                     Earn Tokens
@@ -140,7 +140,7 @@ export default async function Jointeampag() {
                    className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px] capitalize"
                   >
                   <a
-                                       href="https://www.contrib.com/signup/firststep?domain=agentdao.com">
+                                       href={`https://www.contrib.com/signup/firststep?domain=${domain}`}>
                                           Join the {domain} Team: Embrace the Power of Collaboration
                   </a>                        
                </h2>

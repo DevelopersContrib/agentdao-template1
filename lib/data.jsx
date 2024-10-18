@@ -49,7 +49,7 @@ export async function getBlogs() {
   return res.json();
 }
 
-export async function getBlogsById(id) {
+export async function getBlogPostById(id) {
   const domain = getDomain();
   const url = process.env.GET_BLOGS+`&domain=${domain}&id=${id}`;
   console.log('url',url)

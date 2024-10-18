@@ -1,13 +1,13 @@
 import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
-import { imageBuilder, getPostBySlug, getBlogPostById } from "@/sanity/sanity-utils";
+import { imageBuilder, getPostBySlug,getBlogPostById} from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { structuredAlgoliaHtmlData } from "@/app/libs/crawlIndex";
 import { BlogPost } from "@/types/blog";
 import Categories from "@/components/Blog/Categories";
 import Link from "next/link";
-import { getData, getDomain } from '@/lib/data';
+import { getData, getDomain  } from '@/lib/data';
 import Header from "@/components/Header";
 
 import { integrations } from "@/integration.config";
@@ -26,17 +26,19 @@ const getBlogId = (params: any) => {
 export async function generateMetadata({ params }: Props) {
   const { slug } = params;
   const id = getBlogId(slug);
-  const post: BlogPost = await getBlogPostById(id);
+  const c = await getData();
+  const domain = getDomain();
+  const post: any = await getBlogPostById(id,domain);
   const siteURL = process.env.SITE_URL;
   const siteName = process.env.SITE_NAME;
   const authorName = process.env.AUTHOR_NAME;
   const src = "data:image/jpeg;base64,";
   
-  if (post) {
+  if (post.data[0]) {
     
     return {
-      title: `${post.title || "Single Post Page"} | ${siteName}`,
-      description: `${post.title?.slice(0, 136)}...`,
+      title: `${post.data[0].title || "Single Post Page"} | ${siteName}`,
+      description: `${post.data[0].title?.slice(0, 136)}...`,
       author: authorName,
 
       robots: {
@@ -53,13 +55,13 @@ export async function generateMetadata({ params }: Props) {
       },
 
       openGraph: {
-        title: `${post.title} `,
-        description: post.title,
-        url: `${siteURL}/blogpost/${post?.slug+`---${post?.id}`}`,
+        title: `${post.data[0].title} `,
+        description: post.data[0].title,
+        url: `${siteURL}/blogpost/${post.data[0]?.slug+`---${post.data[0]?.id}`}`,
         siteName: siteName,
         images: [
           {
-            url: src+post.image_base64,
+            url: src+post.data[0].image_base64,
             width: 1800,
             height: 1600,
             alt: post.title,
@@ -71,11 +73,11 @@ export async function generateMetadata({ params }: Props) {
 
       twitter: {
         card: "summary_large_image",
-        title: `${post.title} | ${siteName}`,
-        description: `${post.title?.slice(0, 136)}...`,
+        title: `${post.data[0].title} | ${siteName}`,
+        description: `${post.data[0].title?.slice(0, 136)}...`,
         creator: `@${authorName}`,
         site: `@${siteName}`,
-        images: [src+post.image_base64],
+        images: [src+post.data[0].image_base64],
         url:  `${siteURL}/blogpost/${post?.slug+`---${post?.id}`}`,
       },
     };
@@ -97,19 +99,18 @@ const SingleBlogPage = async ({ params }: Props) => {
   const authorName = process.env.AUTHOR_NAME;
   const c = await getData();
   const domain = getDomain();
-  
-
-  const post: BlogPost = await getBlogPostById(id);
+  const post: any = await getBlogPostById(id,domain);
 
 
   await structuredAlgoliaHtmlData({
     type: "blog",
-    title: post?.title || "",
-    htmlString: post?.title || "",
-    pageUrl: `${siteURL}/blogpost/${post?.slug+`---${post?.id}`}`,
-    imageURL: src+post.image_base64,
+    title: post.data[0].title || "",
+    htmlString: post.data[0]?.title || "",
+    pageUrl: `${siteURL}/blogpost/${post.data[0]?.slug+`---${post.data[0]?.id}`}`,
+    imageURL: src+post.data[0].image_base64,
   });
-  if (post) {
+  if (post.data[0]) {
+    
   return (
     <>
     <Header c={c}/>
@@ -156,7 +157,7 @@ const SingleBlogPage = async ({ params }: Props) => {
                 
                 <div className="blog-details">
 
-                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                <div dangerouslySetInnerHTML={{ __html: post.data[0].content }} />
                  
                 </div>
 
