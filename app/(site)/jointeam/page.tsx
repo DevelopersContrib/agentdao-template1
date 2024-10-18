@@ -6,13 +6,14 @@ import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
 
 
-export const metadata: Metadata = {
-   
-  title: "Join the Team | {domain}",
-  description: "Join the {domain} Team: Embrace the Power of Collaboration-Be Part of the Colony - Where Every Member Matters",
-  
-  // other metadata
-};
+export async function generateMetadata(): Promise<Metadata> {
+   const c = await getData();
+   return {
+     // This will override or extend the layout metadata
+     title: `Join Team - ${c.data.title || c.data.domainName}`,
+     description: `${c.data.description}`,
+   };
+ }
 
 
 

@@ -8,12 +8,14 @@ import Header from "@/components/Header";
 
 
 
-export const metadata: Metadata = {
-  title: "Partner with us | AgentDao",
-  description: "Join the AgentDAO Team: Embrace the Power of Collaboration-Be Part of the Colony - Where Every Member Matters",
-
-  // other metadata
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const c = await getData();
+  return {
+    // This will override or extend the layout metadata
+    title: `Partner With Us - ${c.data.title || c.data.domainName}`,
+    description: `${c.data.description}`,
+  };
+}
 
 export default async function Partnerpage () {
   const c = await getData();

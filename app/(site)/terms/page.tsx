@@ -1,7 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
 import TermsText from "@/components/Legal/terms";
-
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -9,10 +10,14 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const TermsPage = () => {
+export default async function TermsPage () {
+  const c = await getData();
+  
   return (
-   <TermsText />
+    <>
+    <Header c={c}/>
+    <TermsText domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())}/>
+   </>
   );
 };
 
-export default TermsPage;

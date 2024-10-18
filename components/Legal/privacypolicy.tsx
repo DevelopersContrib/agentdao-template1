@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 
-const PrivacyPolicyText = () => {
+const PrivacyPolicyText = ({domain}) => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
@@ -23,32 +23,32 @@ const PrivacyPolicyText = () => {
             <div className="blog-details">
                 <h1>Privacy Statement</h1>
                 <p>
-                    AgentDao.com,LLC.(AgentDao.com)is committed to protecting your privacy.We have prepared this Privacy Policy to describe to you 
-                    our practices regarding the Personal Data(as defined below)we collect from users of our website,located at AgentDao.com(the"Site")and online service("Service").
+                    {domain},LLC.({domain})is committed to protecting your privacy.We have prepared this Privacy Policy to describe to you 
+                    our practices regarding the Personal Data(as defined below)we collect from users of our website,located at {domain}(the"Site")and online service("Service").
                 </p>
                 <h2>Privacy Statement Overview</h2>
                 <p>
-                    Your privacy is important to us and AgentDao.com is committed to protecting the privacy of its users and the information that You share in connection with Our Service.Our Privacy Notice 
+                    Your privacy is important to us and {domain} is committed to protecting the privacy of its users and the information that You share in connection with Our Service.Our Privacy Notice 
                     describes how We share and transfer Personal Data(defined in the Privacy Policy below)that You voluntarily provide Us and Our Privacy Policy provides a more detailed description of how We collect,process 
-                    and manage Your Personal Data and informs You of Your rights with respect the privacy practices associated with the,use,and disclosure of Personal Data through the Site and Service.AgentDao.com may 
-                    provide additional notices through the Site or Service in addition to these practices or provide You additional choices about how AgentDao.com may process Your Personal Data.
+                    and manage Your Personal Data and informs You of Your rights with respect the privacy practices associated with the,use,and disclosure of Personal Data through the Site and Service.{domain} may 
+                    provide additional notices through the Site or Service in addition to these practices or provide You additional choices about how {domain} may process Your Personal Data.
                     
                     If You have any questions about this Privacy Notice or Privacy Policy("Privacy Statement"),please contact us at support@CONTRIB.com.
                 </p>
                 <h2>Privacy Notice</h2>
-                <p>This Privacy Notice describes AgentDao.com"s collection,use,and 
+                <p>This Privacy Notice describes {domain}"s collection,use,and 
                 disclosure of the information You provide to Us through Your use of the Site or Service,as well as the rights You have with respect to Your Personal Data.For any questions regarding this Privacy Notice 
                 please contact Us at support@CONTRIB.com.
                 </p>
                 <h2>I.What Information Do We Collect And How Do We Use It?</h2>
-                <p>This Privacy Notice describes AgentDao.com"s collection,use,and disclosure of the information You provide to Us through Your use of the Site or Service,as well as the rights You have with respect to Your Personal Data.For any questions regarding this Privacy Notice please contact Us     at 
+                <p>This Privacy Notice describes {domain}"s collection,use,and disclosure of the information You provide to Us through Your use of the Site or Service,as well as the rights You have with respect to Your Personal Data.For any questions regarding this Privacy Notice please contact Us     at 
                 support@CONTRIB.com.</p>
                 <p>
                     <b>Information We collect from You.</b>
                 </p>
                 <p>&gt;We will collect Personal Data that You voluntarily provide us,for example,when You register for,or 
-    interact with other users through the Site or Service.We may also collect Personal Data when You sign up for marketing emails,events,or other opportunities through AgentDao.com.Personal Data may contain 
-    Your name,email,contact information,as well as job titles,or other information You provide to AgentDao.com.</p><p>&gt;Billing and transactional information pursuant to Your use of the Site 
+    interact with other users through the Site or Service.We may also collect Personal Data when You sign up for marketing emails,events,or other opportunities through {domain}.Personal Data may contain 
+    Your name,email,contact information,as well as job titles,or other information You provide to {domain}.</p><p>&gt;Billing and transactional information pursuant to Your use of the Site 
     and 
     Service.</p><p>&gt;Information regarding Your use of the Site or Service,such as the hardware model,operating system version,web-browser software and Your Internet Protocol(IP)address/device 
     identifier.</p><p>&gt;Statistics and information on Your use of the Site and Service,including Your IP address;device type and unique device identification numbers,device event 
@@ -62,41 +62,41 @@ const PrivacyPolicyText = () => {
     Information</h2><p>We may share Your Personal Data with third parties as follows:</p><p><b>Service Providers.</b></p><p>We may share Your Personal Information with 
     third parties,such as vendors and service providers who provide assistance with billing,payment processing,marketing,data analytics support and service associated with the Site or Service.</p><p 
    ><b>Business Partners.</b></p><p>We may share Your Personal Data with Our channel partners to fulfill obligations and requests,to deliver support,and to provide users and Our 
-    customer"s users with information about AgentDao.com.AgentDao.com does not control how a business partner may use Your Personal Data.Our business partners are responsible for managing the use of Personal 
+    customer"s users with information about {domain}.{domain} does not control how a business partner may use Your Personal Data.Our business partners are responsible for managing the use of Personal 
     Data collected in these circumstances.</p><p><b>Compliance with laws and for other legitimate business purposes.</b></p><p>We may share Your Personal Data when We believe 
     disclosure is necessary or required by law,regulation,to protect users,the integrity of the Site or Service and to defend or exercise Our legal rights.We may also disclose Your Personal Data when it may 
     be 
-    necessary for other legitimate purposes as reasonably determined by AgentDao.com.</p><h2>III.International Transfers of Information</h2><p>Information,including information collected in the 
+    necessary for other legitimate purposes as reasonably determined by {domain}.</p><h2>III.International Transfers of Information</h2><p>Information,including information collected in the 
     European Economic Area("EEA")may be transferred,stored and processed by Us and Our services providers in the United States and other countries whose data protection laws may be different than the laws of 
     Your country.We will protect Your Personal Data in accordance with this Privacy Notice wherever it is processed and take appropriate steps to protect the information in accordance with applicable 
-    laws.These steps include obligations to both AgentDao.com and You and available on AgentDao.com.You may also request an executable version of AgentDao.com"s Data Processing Agreement by contacting 
-    support@CONTRIB.com.</p><h2>IV.Information Security and Confidentiality</h2><p>AgentDao.com maintains(and requires its subcontractors and service providers to maintain)appropriate 
+    laws.These steps include obligations to both {domain} and You and available on {domain}.You may also request an executable version of {domain}"s Data Processing Agreement by contacting 
+    support@CONTRIB.com.</p><h2>IV.Information Security and Confidentiality</h2><p>{domain} maintains(and requires its subcontractors and service providers to maintain)appropriate 
     organizational and technical measures designed to protect the security and confidentiality of any information We process.However,no organizational or technical measures are 100%secure so You should take 
-    care when disclosing information online and act reasonably to protect Yourself online.</p><h2>V.Privacy Rights</h2><p>You may modify the information You have provided to AgentDao.com at any 
-    time through Your AgentDao.com profile.You can also opt-out of receiving marketing communications,deactivate,or delete Your account at any time.</p><h2>VI.Additional Rights for EEA users or similar 
+    care when disclosing information online and act reasonably to protect Yourself online.</p><h2>V.Privacy Rights</h2><p>You may modify the information You have provided to {domain} at any 
+    time through Your {domain} profile.You can also opt-out of receiving marketing communications,deactivate,or delete Your account at any time.</p><h2>VI.Additional Rights for EEA users or similar 
     international areas</h2><p>If You live in the European Economic Area,or a similar international area,You may have additional privacy rights available to You under applicable laws.We will 
     process Your requests in accordance with applicable data protection laws.If You would like to exercise any of the below rights,please contact support@CONTRIB.com so that We may consider Your request in 
     accordance with applicable law:</p><p>&gt;Right not to provide or withdraw consent:You have the right not to provide or withdraw Your consent at any time.</p><p>&gt;Right of 
     access:You may have the right to access the Personal Data that You provided Us.</p><p>&gt;Right of erasure:You may have the right to the erasure of Personal Data that We hold about 
     You.</p><p 
-   >&gt;Right to object to processing:You may have the right to request that AgentDao.com stop processing Your Personal Data and/or to stop sending You marketing communications.</p><p 
+   >&gt;Right to object to processing:You may have the right to request that {domain} stop processing Your Personal Data and/or to stop sending You marketing communications.</p><p 
    >&gt;Right to rectification:You may have the right to require Us to correct any of Your Personal Data.</p><h2>VII.Additional Information</h2><p><b>How long We retain Your 
     information</b></p><p>We will retain personal information We collect from You for the period allowable by law and where We have a justifiable business need to do so,unless a longer period is 
     required or permitted by law.You can request deletion of Your Personal Data at any time and We will consider Your request in accordance with applicable law.</p><p><b>External Links</b></p><p 
-   >The AgentDao.com Site and Service may link to other websites or services.Other websites may also contain links to the AgentDao.com Site or Service.AgentDao.com does not control those 
+   >The {domain} Site and Service may link to other websites or services.Other websites may also contain links to the {domain} Site or Service.{domain} does not control those 
     websites 
-    or their privacy practices.The personal information You choose to give to such parties is not covered by this Privacy Notice or the AgentDao.com Privacy Policy.</p><p><b>Changes to this 
-    Privacy Notice</b></p><p>AgentDao.com will review and update this Privacy Notice in response to changing legal,technical and business developments.Please review this Privacy Notice 
+    or their privacy practices.The personal information You choose to give to such parties is not covered by this Privacy Notice or the {domain} Privacy Policy.</p><p><b>Changes to this 
+    Privacy Notice</b></p><p>{domain} will review and update this Privacy Notice in response to changing legal,technical and business developments.Please review this Privacy Notice 
     frequently 
-    to understand how AgentDao.com is protecting Your Personal Data.</p><p><b>Data Protection Officer</b></p><p>AgentDao.com has appointed a Data Protection Officer to ensure 
+    to understand how {domain} is protecting Your Personal Data.</p><p><b>Data Protection Officer</b></p><p>{domain} has appointed a Data Protection Officer to ensure 
     continued commitment to privacy and security practices.For further information please contact Us at:support@CONTRIB.com</p><h2>Privacy Policy</h2><p>This Privacy Policy describes in further 
-    detail AgentDao.com"s collection,processing,and treatment of Your information,as well as the rights You have with respect to such information.This Privacy Policy will provide You with further technical 
+    detail {domain}"s collection,processing,and treatment of Your information,as well as the rights You have with respect to such information.This Privacy Policy will provide You with further technical 
     information regarding the processing of Your Personal Data described in the Privacy Notice.If You have any questions or concerns or complaints about this Privacy Policy or Our data collection or 
     processing 
     practices,or if You want to report any security violations to us,please contact Us at:support@CONTRIB.com.</p><h2>I.User Consent</h2><p>By submitting Personal Data through Our Site or 
     Service,You agree to the terms of this Privacy Policy,as well as Our Privacy Notice and the Terms of Service,and You expressly consent to the collection,use and disclosure of Your Personal Data in 
     accordance with the Privacy Policy,Privacy Notice,and Terms of Service.If You do not agree,You should discontinue use of the Site and Service immediately.</p><h2>II.A Note About Children</h2><p 
-   >We do not intentionally gather Personal Data from visitors who are under the age of 13.If a child under 13 submits Personal Data to AgentDao.com and We learn that the Personal Data is the 
+   >We do not intentionally gather Personal Data from visitors who are under the age of 13.If a child under 13 submits Personal Data to {domain} and We learn that the Personal Data is the 
     information of a child under 13,We will attempt to delete the information as soon as possible.If You believe that We might have any Personal Data from a child under 13,please contact Us at 
     support@CONTRIB.com immediately.</p><h2>III.A Note To Users Outside Of the United States</h2><p>If You are a non-U.S.user of the Site,by accessing the Site and providing us with Personal 
     Data,You acknowledge and agree that Your Personal Data may be processed for the purposes identified in the Privacy Policy.In addition,Your Personal Data may be processed in the country in which it was 
@@ -158,7 +158,7 @@ const PrivacyPolicyText = () => {
     that may be required by law to allow us to access and upload the third party"s names and e-mail addresses as required above.You or the third party may contact Us at support@CONTRIB.com to request the 
     removal of this information from Our database.The e-mail that is sent to Your friends will come from Your e-mail address so that Your friends know that You want to invite to Our Site and Service.</p><p 
    ><b>(c)Information Collected From Address Book and Contact Importing</b></p><p>You may use Our address book and contacts importer to upload Your contacts from other services into 
-    AgentDao.com.When You import Your contacts,We may indefinitely store the contact information in Our database,including Your contacts'names,e-mails,phone numbers,locations,and relationships to You,subject 
+    {domain}.When You import Your contacts,We may indefinitely store the contact information in Our database,including Your contacts'names,e-mails,phone numbers,locations,and relationships to You,subject 
     to applicable law.We do not store any passwords You provide as part of the contact import process.After We import Your contacts,We will use this information to help Us establish networks of 
     contacts,document relationships,facilitate referrals,and improve Our Site and Service.We may also use this information to show You and other users that You may know each other or have shared contacts.We 
     rely upon You to obtain whatever consents from the relevant third parties that may be required by law to allow Us to access and upload the third parties"names,e-mail addresses,and other contact 
@@ -173,7 +173,7 @@ const PrivacyPolicyText = () => {
     Service;improve the quality of experience when You interact with the Site and Service;send You a welcome e-mail to verify ownership of the e-mail address provided when Your Account was created;send You 
     administrative e-mail notifications,such as information about pending job offers,security or support and maintenance advisories;respond to Your inquiries related to employment opportunities or other 
     requests;make telephone calls to You,from time to time,as a part of secondary fraud protection or to solicit Your feedback;send You calendar invitations;and send newsletters,surveys,offers,and other 
-    promotional materials related to the Site or Service and for other marketing purposes of AgentDao.com.</p><p><b>(b)User Testimonials And Feedback</b></p><p>We often receive 
+    promotional materials related to the Site or Service and for other marketing purposes of {domain}.</p><p><b>(b)User Testimonials And Feedback</b></p><p>We often receive 
     testimonials and comments from users who have had positive experiences with Our Service.We occasionally publish such Content.When We publish this Content,We may identify Our Users by their first and last 
     name and may also indicate their home city.We obtain the User"s consent prior to posting his or her name along with the testimonial.We may post user feedback on the Site from time to time.We will share 
     Your feedback with Your first name and last initial only.If We choose to post Your first and last name along with Your feedback,We will obtain Your consent prior to posting You name with Your feedback.If 
@@ -190,7 +190,7 @@ const PrivacyPolicyText = () => {
     has access to Your information by going to Your account settings and changing Your publishing options.</p><p><b>(b)Third Party Service Providers</b></p><p>We may share Your 
     Personal Data with third party service providers to:provide You with the Service;to conduct quality assurance testing;to facilitate creation of Accounts;to provide technical support;and/or to provide 
     other 
-    services to AgentDao.com.These third party service providers are required not to use Your Personal Data other than to provide the services requested by AgentDao.com.</p><p 
+    services to {domain}.These third party service providers are required not to use Your Personal Data other than to provide the services requested by {domain}.</p><p 
    ><b>(c)Affiliates</b></p><p>We may share some or all of Your Personal Data with Our parent company,subsidiaries,joint ventures,or other companies under a common 
     control("Affiliates"),in which case We will require Our Affiliates to honor this Privacy Statement.</p><p><b>(d)Corporate Restructuring</b></p><p>We may share some or all of 
     Your 
@@ -208,10 +208,10 @@ const PrivacyPolicyText = () => {
     the Site and further distribute it to a wider audience through third party sites and services.Once displayed on publicly viewable web pages,that information can be collected and used by others.We cannot 
     control who reads Your postings or what other users may do with the information that You voluntarily post,so it is very important that You do not put Personal Data in Your posts.Once You have posted 
     information publicly,while You will still be able to edit and delete it on the Site,You will not be able to edit or delete such information cached,collected,and stored elsewhere by others(e.g.,search 
-    engines).</p><p><b>(g)Other Disclosures</b></p><p>Regardless of any choices You make regarding Your Personal Data(as described below),AgentDao.com may disclose Personal Data if 
+    engines).</p><p><b>(g)Other Disclosures</b></p><p>Regardless of any choices You make regarding Your Personal Data(as described below),{domain} may disclose Personal Data if 
     it 
-    believes in good faith that such disclosure is necessary(a)in connection with any legal investigation;(b)to comply with relevant laws or to respond to subpoenas or warrants served on AgentDao.com;(c)to 
-    protect or defend the rights or property of AgentDao.com or users of the Site or Service;and/or(d)to investigate or assist in preventing any violation or potential violation of the law,this Privacy 
+    believes in good faith that such disclosure is necessary(a)in connection with any legal investigation;(b)to comply with relevant laws or to respond to subpoenas or warrants served on {domain};(c)to 
+    protect or defend the rights or property of {domain} or users of the Site or Service;and/or(d)to investigate or assist in preventing any violation or potential violation of the law,this Privacy 
     Policy,or Our Terms of Use.</p><h2>IX Third Party Websites</h2><p>Our Site may contain links to third party websites.When You click on a link to any other website or location,You will leave 
     Our Site and go to another site,and another entity may collect Personal Data or Anonymous Data from You.We have no control over,do not review,and cannot be responsible for,these outside websites or their 
     content.Please be aware that the terms of this Privacy Policy do not apply to these outside websites or content,or to any collection of Your Personal Data after You click on links to such outside 
@@ -235,10 +235,10 @@ const PrivacyPolicyText = () => {
     that We may be required to keep such information and not delete it(or to keep this information for a certain time,in which case We will comply with Your deletion request only after We have fulfilled such 
     requirements).When We delete any information,it will be deleted from the active database,but may remain in Our archives.We may also retain Your information for fraud or similar purposes.</p><h2>XI 
     Security 
-    Of Your Personal Data</h2><p>AgentDao.com is committed to protecting the security of Your Personal Data.We use a variety of industry-standard security technologies and procedures to help 
+    Of Your Personal Data</h2><p>{domain} is committed to protecting the security of Your Personal Data.We use a variety of industry-standard security technologies and procedures to help 
     protect Your Personal Data from unauthorized access,use,or disclosure.We also require You to enter a password to access Your Account information.Please do not disclose Your Account password to 
     unauthorized 
-    people.No method of transmission over the Internet,or method of electronic storage,is 100%secure,however.Therefore,while AgentDao.com uses reasonable efforts to Your Personal Data,AgentDao.com cannot 
+    people.No method of transmission over the Internet,or method of electronic storage,is 100%secure,however.Therefore,while {domain} uses reasonable efforts to Your Personal Data,{domain} cannot 
     guarantee its absolute security.</p><h2>XII Changes To This Privacy Policy</h2><p>This Privacy Policy may be updated from time to time for any reason.We will notify You of any changes to Our 
     Privacy Policy by posting the new Privacy Policy here:http:</p>
             </div>

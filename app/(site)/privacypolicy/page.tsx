@@ -1,6 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
 import PrivacyPolicyText from "@/components/Legal/privacypolicy";
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
 
 export const metadata: Metadata = {
@@ -9,10 +11,14 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const PrivacyPage = () => {
+export default async function PrivacyPage() {
+  const c = await getData();
   return (
-   <PrivacyPolicyText />
+    <>
+    <Header c={c}/>
+    <PrivacyPolicyText domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())}/>
+    </>
+   
   );
 };
 
-export default PrivacyPage;

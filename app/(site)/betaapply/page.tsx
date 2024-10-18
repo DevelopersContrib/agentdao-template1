@@ -5,12 +5,14 @@ import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
 
 
-export const metadata: Metadata = {
-  title: "Beta Signup to  ${domain}",
-  description: "Beta signup options for ${domain}",
-  // other metadata
-};
-
+export async function generateMetadata(): Promise<Metadata> {
+  const c = await getData();
+  return {
+    // This will override or extend the layout metadata
+    title: `Beta Signup - ${c.data.title || c.data.domainName}`,
+    description: `${c.data.description}`,
+  };
+}
 export default async function JoinTheTeamPage () {
   const c = await getData();
   const domain = getDomain();
