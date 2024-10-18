@@ -45,7 +45,7 @@ const menuData: Menu[] = [
         id: 54,
         title: "Contact Us",
         newTab: false,
-        path: "https://domaindirectory.com/servicepage/?domain=agentdao.com",
+        path: "https://domaindirectory.com/servicepage/?domain=<domain>",
       },
       {
         id: 55,

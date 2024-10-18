@@ -131,7 +131,7 @@ const Header = ({ c }) => {
                             key={key}
                             className="hover:text-primaryho active:text-accent1"
                           >
-                            <Link href={item.path || "#"}>{item.title}</Link>
+                            <Link href={item.path?.replace("<domain>", domain) || "#"}>{item.title}</Link>
                           </li>
                         ))}
                       </ul>
