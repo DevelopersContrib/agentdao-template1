@@ -35,7 +35,7 @@ export async function getScript(url) {
 
 
 export async function getBlogs() {
-  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  const domain = getDomain();
   const url = process.env.GET_BLOGS+`&domain=${domain}`
   console.log('url',url)
   const res = await fetch(url, { next: { revalidate: 3600 } });
@@ -50,7 +50,7 @@ export async function getBlogs() {
 }
 
 export async function getBlogsById(id) {
-  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+  const domain = getDomain();
   const url = process.env.GET_BLOGS+`&domain=${domain}&id=${id}`;
   console.log('url',url)
   const res = await fetch(url, { next: { revalidate: 3600 } });
