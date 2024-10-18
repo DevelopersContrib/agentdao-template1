@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
+
 
 
 
@@ -12,9 +15,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const Partnerpage = () => {
+export default async function Partnerpage () {
+  const c = await getData();
+   const domain = getDomain();
   return (
     <>
+    <Header c={c}/>
     <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap items-center justify-between">
@@ -33,7 +39,7 @@ const Partnerpage = () => {
                 className="bg-primary absolute bottom-0 right-0 z-10 max-w-[320px] overflow-hidden rounded-tr-[50px] py-10 px-6 text-xl font-bold text-white sm:px-10 sm:text-2xl"
               >
                 <div className="text-center">
-            <Link href="https://domaindirectory.com/servicepage/?domain=agentdao.com" className="inline-block bg-primary text-white font-bold py-2 px-4 rounded hover:bg-primary-dark transition-colors duration-300">
+            <Link href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="inline-block bg-primary text-white font-bold py-2 px-4 rounded hover:bg-primary-dark transition-colors duration-300">
                 Reach Out for Partnership Inquiries
             </Link>
         </div>
@@ -222,7 +228,7 @@ const Partnerpage = () => {
               
 
                 <div className="mt-8 md:mt-10">
-                    <a href="https://domaindirectory.com/servicepage/?domain=agentdao.com" className="inline-block bg-primaryho text-white font-bold py-2 px-4 rounded hover:bg-primaryhover transition-colors duration-300">
+                    <a href={`https://domaindirectory.com/servicepage/?domain=${domain}`} className="inline-block bg-primaryho text-white font-bold py-2 px-4 rounded hover:bg-primaryhover transition-colors duration-300">
                         Partner with Us
                     </a>
                 </div>
@@ -237,4 +243,4 @@ const Partnerpage = () => {
   );
 };
 
-export default Partnerpage;
+

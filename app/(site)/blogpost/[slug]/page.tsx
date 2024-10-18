@@ -7,6 +7,8 @@ import { structuredAlgoliaHtmlData } from "@/app/libs/crawlIndex";
 import { BlogPost } from "@/types/blog";
 import Categories from "@/components/Blog/Categories";
 import Link from "next/link";
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
 import { integrations } from "@/integration.config";
 import LoadingState from '@/components/Includes/LoadingState';
@@ -92,6 +94,8 @@ const SingleBlogPage = async ({ params }: Props) => {
   const siteURL = process.env.SITE_URL;
   const siteName = process.env.SITE_NAME;
   const authorName = process.env.AUTHOR_NAME;
+  const c = await getData();
+  const domain = getDomain();
   
 
   const post: BlogPost = await getBlogPostById(id);
@@ -107,6 +111,7 @@ const SingleBlogPage = async ({ params }: Props) => {
   if (post) {
   return (
     <>
+    <Header c={c}/>
       <section className="pb-20 pt-35 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex flex-col-reverse gap-7.5 lg:flex-row xl:gap-12.5">

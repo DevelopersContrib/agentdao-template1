@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 import VNOC_newsletter from "@/components/Forms/newsletter";
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
 
 export const metadata: Metadata = {
@@ -14,10 +16,12 @@ export const metadata: Metadata = {
 
 
 
-const Jointeampage = () => {
- const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+export default async function Jointeampag() { 
+   const c = await getData();
+   const domain = getDomain();
   return (
     <>
+    <Header c={c}/>
 <section
     className="pt-40 pb-20 lg:pt-[120px] lg:pb-[90px]">
 
@@ -52,7 +56,7 @@ const Jointeampage = () => {
                                  </div>
                               </div>
                            </div>
-                           <VNOC_newsletter />
+                           <VNOC_newsletter domain={domain}/>
                            <div>
                               <span className="absolute top-0 left-0 z-[-1]">
                                  <svg
@@ -172,4 +176,4 @@ const Jointeampage = () => {
   );
 };
 
-export default Jointeampage;
+

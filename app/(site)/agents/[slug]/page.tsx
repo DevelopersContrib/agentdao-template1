@@ -2,10 +2,15 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import featuresData from "@/components/Features/featuresData";
 import Link from "next/link";
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
-export default function AgentPage({ params }) {
+
+export default async function AgentPage({ params }) {
   const { slug } = params;
   const feature = featuresData.find((item) => item.title === params.slug);
+  const c = await getData();
+   const domain = getDomain();
 
   if (!feature) {
     return (
@@ -19,6 +24,7 @@ export default function AgentPage({ params }) {
 
   return (
     <>
+    <Header c={c}/>
       <section className="h-screen flex items-center justify-center relative z-10 overflow-hidden pt-25 md:pt-20 xl:pt-15">
         <div className="mt-1 pt-1 mb-8 px-12 mx-auto max-w-7xl">
           <div className="w-full mx-auto text-left md:w-12/12 xl:w-12/12 md:text-center">

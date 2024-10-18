@@ -1,7 +1,8 @@
 import React from "react";
 import Script from "next/script";
 import { Metadata } from "next";
-
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Support Page ${domain}",

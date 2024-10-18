@@ -1,7 +1,8 @@
 
 import { Metadata } from "next";
 import HubspotContactForm from "@/components/Betaform/form";
-
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Beta Signup to  ${domain}",
@@ -9,8 +10,9 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const JoinTheTeamPage = () => {
-  const domain = process.env.NEXT_PUBLIC_VERCEL_URL;
+export default async function JoinTheTeamPage  () {
+  const c = await getData();
+  const domain = getDomain();
   return (
     <section className="pt-35 px-20 md:px-8 ml-20 mr-20">
     <div className="pb-20 px-20">
@@ -26,4 +28,4 @@ const JoinTheTeamPage = () => {
   );
 };
 
-export default JoinTheTeamPage;
+

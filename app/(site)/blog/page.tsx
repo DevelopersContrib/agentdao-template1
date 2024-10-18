@@ -4,6 +4,8 @@ import { Metadata } from "next";
 import { getPosts } from "@/sanity/sanity-utils";
 import { Blog } from "@/types/blog";
 import { integrations, messages } from "@/integration.config";
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
 
 //import { integrations, messages } from "@/integration.config";
 
@@ -15,9 +17,11 @@ export const metadata: Metadata = {
 
 const BlogPage = async () => {
   const posts: Blog[] = integrations.isSanityEnabled ? await getPosts() : [];
-
+  const c = await getData();
+  const domain = getDomain();
   return (
     <>
+     <Header c={c}/>
       {/* <!-- ===== Blog Grid Start ===== --> */}
 
       <section className="py-20 lg:py-25 xl:py-30">

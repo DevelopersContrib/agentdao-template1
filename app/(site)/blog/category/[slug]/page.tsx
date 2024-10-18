@@ -2,6 +2,9 @@ import BlogItem from "@/components/Blog/BlogItem";
 import { getPostByCategory } from "@/sanity/sanity-utils";
 import { Blog } from "@/types/blog";
 import { integrations } from "@/integration.config";
+import { getData, getDomain } from '@/lib/data';
+import Header from "@/components/Header";
+
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -32,9 +35,11 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
   const posts: Blog[] = integrations.isSanityEnabled
     ? await getPostByCategory(params.slug)
     : [];
-
+    const c = await getData();
+    const domain = getDomain();
   return (
     <>
+    <Header c={c}/>
       {/* <!-- ===== Blog Grid Start ===== --> */}
       <section className="py-20 lg:py-25 xl:py-30">
         <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">

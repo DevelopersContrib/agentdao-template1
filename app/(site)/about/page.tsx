@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 import { getData, getDomain } from '@/lib/data';
-
+import Header from "@/components/Header";
 
 export async function generateMetadata(): Promise<Metadata> {
    const c = await getData();
+   
    return {
      // This will override or extend the layout metadata
      title: `About - ${c.data.title || c.data.domainName}`,
@@ -13,10 +14,12 @@ export async function generateMetadata(): Promise<Metadata> {
    };
  }
 
-const AboutPage = () => {
-  const domain = getDomain();
+ export default async function AboutPage() {
+   const c = await getData();
+   const domain = getDomain();
   return (
     <>
+     <Header c={c}/>
 <section
     className="pt-40 pb-20 lg:pt-[120px] lg:pb-[90px]"
    >
@@ -674,4 +677,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+
