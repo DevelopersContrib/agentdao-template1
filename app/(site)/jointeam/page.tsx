@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import VNOC_newsletter from "@/components/Forms/newsletter";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -172,6 +173,7 @@ export default async function Jointeampag() {
       </div>
    </div>
 </section>
+<Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
 
 </>
   );

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
    const c = await getData();
@@ -672,7 +673,7 @@ export async function generateMetadata(): Promise<Metadata> {
       </div>
    </div>
 </section>
-
+<Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
 </>
   );
 };

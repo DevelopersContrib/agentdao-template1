@@ -9,6 +9,7 @@ import Categories from "@/components/Blog/Categories";
 import Link from "next/link";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 import { integrations } from "@/integration.config";
 
@@ -196,6 +197,7 @@ const SingleBlogPage = async ({ params }: Props) => {
           </div>
         </div>
       </section>
+      <Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
     </>
   );
 };

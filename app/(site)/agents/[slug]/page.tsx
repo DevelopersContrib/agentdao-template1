@@ -4,6 +4,7 @@ import featuresData from "@/components/Features/featuresData";
 import Link from "next/link";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 export default async function AgentPage({ params }) {
@@ -126,6 +127,7 @@ export default async function AgentPage({ params }) {
           </div>
         </div>
       </section>
+      <Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
     </>
   );
 }

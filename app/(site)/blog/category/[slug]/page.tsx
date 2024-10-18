@@ -4,7 +4,7 @@ import { Blog } from "@/types/blog";
 import { integrations } from "@/integration.config";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
-
+import Footer from "@/components/Footer";
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -49,6 +49,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
       </section>
+      <Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
       {/* <!-- ===== Blog Grid End ===== --> */}
     </>
   );

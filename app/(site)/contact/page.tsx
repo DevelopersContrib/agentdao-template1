@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Metadata } from "next";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Support Page ${domain}",

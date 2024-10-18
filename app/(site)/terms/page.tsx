@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import TermsText from "@/components/Legal/terms";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -17,6 +18,7 @@ export default async function TermsPage () {
     <>
     <Header c={c}/>
     <TermsText domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())}/>
+    <Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
    </>
   );
 };

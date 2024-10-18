@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import HubspotContactForm from "@/components/Betaform/form";
 import { getData, getDomain } from '@/lib/data';
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -30,6 +31,7 @@ export default async function JoinTheTeamPage () {
       </div>
     </div>
     </section>
+    <Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
     </>
   );
 };

@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 
 import { integrations } from "@/integration.config";
 import LoadingState from '@/components/Includes/LoadingState';
+import Footer from "@/components/Footer";
 
 type Props = {
   params: { slug: string };
@@ -165,6 +166,7 @@ const SingleBlogPage = async ({ params }: Props) => {
           </div>
         </div>
       </section>
+      <Footer domain={c.data.domainName.replace(/(^\w|\s\w)/g, m => m.toUpperCase())} />
     </>
   );
     } else{
